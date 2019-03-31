@@ -1,0 +1,35 @@
+<div class="card">
+  <div class="card-header bg-primary text-white">
+    {{title}}
+  </div>
+  <div class="card-block mt-2">
+    <form class="form">
+      <div class="form-group row">
+        <label class="col-form-label col-sm-1 text-sm-right ml-2" for="filterDesc">Filter:</label>
+        <div class="col-sm-5">
+          <input type="text" [(ngModel)]="filterSearch" class="form-control" name="filterDesc" id="filterDesc"
+            placeholder="Filter...">
+        </div>
+        <label class="col-form-label col-sm-4">
+          Filtered by: {{filterSearch}}</label>
+        <button class="btn btn-sm col-xs-2 ml-2" [ngClass]="{'btn-danger': showRatings, 'btn-primary': !showRatings}"
+          (click)="toggleRating()">
+          {{showRatings?'Hide':'Show'}} ratings
+        </button>
+      </div>
+    </form>
+    <div *ngIf="products && products.length">
+      <div class="row headers no-gutters">
+        <div class="col-4 header-description">{{headers.desc}}</div>
+        <div class="col-2">
+          {{headers.stock}}
+        </div>
+        <div class="col">{{headers.avail}}</div>
+        <div class="col">{{headers.price}}</div>
+        <div  class="col">{{headers.rat}}</div>
+      </div>
+      <app-product-item class="row no-gutters" [ngClass]="{'even': isEven, 'disabled-row': prod.stock === 0}" *ngFor="let prod of products | productsFilter:filterSearch; let isEven = even"
+        [product]="prod" [showRating]="showRatings"></app-product-item>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<div class="col-4 pl-2">{{ product.description }}</div>
+<div class="col-2">{{product.stock}}</div>
+<div class="col-2">{{ product.available | date:'dd/MM/y' }}</div>
+<div class="col">{{ product.price | currency:'EUR':'symbol' }}</div>
+<div *ngIf="showRating" class="col-2">
+  <app-star-rating [rating]="product.rating" (ratingChanged)="changeRating($event)"></app-star-rating>
+</div>
+<div *ngIf="!showRating" class="col-2"></div>
+

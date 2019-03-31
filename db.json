@@ -1,0 +1,29 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "description": "DDR4 2x 8GB Corsair vengance RGB",
+      "price": 145,
+      "available": "2018-06-01",
+      "imageUrl": "./src/assets/img/products/corsair-ddr4-2x8gb.jpg",
+      "stock": 8,
+      "rating": 4
+    }, {
+      "id": 2,
+      "description": "Intel i9-9900K",
+      "price": 539,
+      "available": "2018-11-01",
+      "imageUrl": "edo-proyect/src/assets/img/products/i9-9900k.jpg",
+      "stock": 3,
+      "rating": 5
+    }, {
+      "id": 3,
+      "description": "MSI mpg Z390M Edge AC",
+      "price": 184,
+      "available": "2018-09-28",
+      "imageUrl": "./src/assets/img/products/msi-mpg-z390m-gaming.jpg",
+      "stock": 0,
+      "rating": 2
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+button {
+  width: 10vw;
+  height: 10vw;
+  border-radius: 20em;
+  margin-top: 2em;
+}
+
+a {
+  color: white;
+}
+
+.container {
+  text-align: center;
+}

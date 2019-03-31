@@ -1,0 +1,12 @@
+.title {
+  width: auto;
+  height: 10vh;
+  background: rgb(5, 64, 172);
+  opacity: 0.7;
+  text-align: center;
+  vertical-align: center;
+  font-size: 2em;
+  border-radius: 0.5em;
+  box-shadow: 2px 2px 2px 2px;
+  color: white;
+}

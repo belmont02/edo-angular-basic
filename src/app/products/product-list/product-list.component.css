@@ -1,0 +1,23 @@
+app-product-item {
+  height: 4em;
+  border: solid 1px #aaa;
+}
+
+app-product-item.even {
+  background-color: #f0f0f0;
+}
+
+.headers {
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  padding: 5px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.disabled-row {
+  color: #ccc;
+}
