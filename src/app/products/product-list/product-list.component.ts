@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from '../models/product.model';
+import { IProduct } from '../models/product.model';
 import { ProductService } from '../services/product.service';
 
 @Component({
@@ -20,7 +20,7 @@ export class ProductListComponent implements OnInit {
   showRatings = true;
   filterSearch = '';
 
-  products: Product[];
+  products: IProduct[];
 
   constructor(private productService: ProductService) {}
 

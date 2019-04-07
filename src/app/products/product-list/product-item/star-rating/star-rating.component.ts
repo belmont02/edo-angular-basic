@@ -1,3 +1,4 @@
+import { ProductService } from './../../../services/product.service';
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
@@ -23,5 +24,4 @@ export class StarRatingComponent implements OnInit {
   setRating() {
     this.ratingChanged.emit(this.auxRating);
   }
-
 }

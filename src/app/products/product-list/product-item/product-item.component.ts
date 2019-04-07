@@ -1,5 +1,5 @@
 import { ProductsFilterPipe } from './../../pipes/products-filter.pipe';
-import { Product } from '../../models/product.model';
+import { IProduct } from '../../models/product.model';
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductService } from 'src/app/products/services/product.service';
@@ -12,7 +12,7 @@ import { ProductService } from 'src/app/products/services/product.service';
 })
 export class ProductItemComponent implements OnInit {
 
-  @Input() product: Product;
+  @Input() product: IProduct;
   @Input() showRating: boolean;
 
   productImage: string;
@@ -20,7 +20,8 @@ export class ProductItemComponent implements OnInit {
 
   ngOnInit() { }
 
-  changeRating(rating: number) {
+  changeRating(rating: number): void {
     this.product.rating = rating;
+    this.productService.updateRating(this.product).subscribe();
   }
 }
